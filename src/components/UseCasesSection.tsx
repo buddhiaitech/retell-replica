@@ -112,12 +112,12 @@ const UseCasesSection = () => {
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12 animate-fade-in">Use Cases</h2>
           <Tabs defaultValue="receptionist" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 mb-12 bg-muted/50 p-2 rounded-2xl glass">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12 bg-muted/50 p-2 rounded-2xl justify-center mx-auto max-w-4xl">
               {useCases.map((useCase) => (
                 <TabsTrigger 
                   key={useCase.id} 
                   value={useCase.id}
-                  className="text-xs lg:text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 rounded-xl hover:scale-105"
+                  className="text-xs lg:text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 rounded-xl text-center"
                 >
                   {useCase.title}
                 </TabsTrigger>

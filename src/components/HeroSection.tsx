@@ -26,10 +26,10 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-8xl font-bold text-foreground mb-8 leading-tight">
-            Intelligent AI Voice{" "}
-            <span className="text-foreground">
-              Calling Center
-            </span>{" "}
+            Intelligent <span className="text-sky-300">AI</span> Voice{" "}
+            <span className="text-sky-300">
+              Calling
+            </span> Center{" "}
             Platform
           </h1>
           
