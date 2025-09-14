@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { useState, useEffect, useRef } from "react";
+import customerSupportImage from "@/assets/customer-support.jpg";
+import healthcareVoiceImage from "@/assets/healthcare-voice.jpg";
 
 
 const UseCasesSection = () => {
@@ -40,7 +42,7 @@ const UseCasesSection = () => {
       id: "customer-support",
       title: "Customer Support",
       description: "24/7 first-level technical support with order status inquiries, billing management, and complaint resolution.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      image: customerSupportImage,
       features: ["24/7 Support", "Order Inquiries", "Billing Management", "Complaint Resolution"]
     },
     {
@@ -54,7 +56,7 @@ const UseCasesSection = () => {
       id: "healthcare",
       title: "Healthcare & Appointments",
       description: "Patient appointment scheduling and reminders, medication adherence follow-ups, post-treatment check-ins, and insurance verification.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      image: healthcareVoiceImage,
       features: ["Appointment Scheduling", "Medication Follow-ups", "Check-ins", "Insurance Verification"]
     }
   ];

@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
+import Orb from "@/components/ui/orb";
 
 const FAQSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -72,6 +73,16 @@ const FAQSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               Everything You Need to Know About Buddhi's AI Voice Agents
             </h2>
+            
+            {/* Orb Animation */}
+            <div className="w-64 h-64 mx-auto lg:mx-0">
+              <Orb 
+                hue={220} 
+                hoverIntensity={0.3} 
+                rotateOnHover={true}
+                forceHoverState={false}
+              />
+            </div>
           </div>
           
           {/* Right Column - FAQ Accordion */}
