@@ -44,7 +44,11 @@ const HowItWorksSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
-            <Card key={step.number} className="border border-border bg-card h-[450px] w-full">
+            <Card key={step.number} className={`border border-border bg-card ${
+              index === 0 || index === 3 
+                ? "h-[520px] w-[280px] mx-auto" 
+                : "h-[450px] w-full"
+            }`}>
               <CardContent className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-foreground mb-6 mt-4">
                   {step.title}
@@ -52,11 +56,13 @@ const HowItWorksSection = () => {
                 <p className="text-muted-foreground leading-relaxed text-sm mb-6">
                   {step.description}
                 </p>
-                <div className="w-full h-56 rounded-lg overflow-hidden border border-border/50">
+                <div className={`w-full rounded-lg overflow-hidden border border-border/50 ${
+                  index === 0 || index === 3 ? "h-72" : "h-56"
+                }`}>
                   <img 
                     src={step.gif} 
                     alt={`${step.title} demonstration`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </CardContent>
