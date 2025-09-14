@@ -6,42 +6,42 @@ import { Button } from "@/components/ui/button";
 const FeaturesSection = () => {
   const buildFeatures = [
     {
-      id: "knowledge-base",
-      title: "Auto-Sync Knowledge Base",
-      description: "Your AI agents stay up-to-date effortlessly by syncing directly with your company's knowledge base. No manual updates required.",
+      id: "smart-voice",
+      title: "Smart Voice Agents",
+      description: "Natural language processing with advanced conversation flows, multi-language support with native accent adaptation, and emotion recognition.",
       icon: "🧠"
     },
     {
-      id: "call-transfer",
-      title: "Powerful Call Transfer Feature", 
-      description: "Easily set up warm transfers with handoff messages so the next agent is always prepared. Setup multiple call transfers based on your needs.",
-      icon: "📞"
+      id: "omnichannel",
+      title: "Omnichannel Integration", 
+      description: "Seamless integration with existing CRM systems, support for inbound and outbound campaigns, with real-time monitoring and analytics dashboard.",
+      icon: "🔗"
     },
     {
-      id: "appointment-booking",
-      title: "Easy Appointment Booking",
-      description: "Let your AI phone agents schedule meetings in seconds with simple, natural language. Integrate tools like Cal.com to ensure appointments are automatically logged.",
-      icon: "📅"
+      id: "custom-flows",
+      title: "Customizable Call Flows",
+      description: "Drag-and-drop conversation builder with dynamic scripting, conditional logic, A/B testing, and custom voice training for brand consistency.",
+      icon: "⚙️"
     },
     {
-      id: "navigate-ivr",
-      title: "Navigate IVR",
-      description: "When encounter IVR systems, Retell Agents has the ability to press the correct digits to the right destination.",
-      icon: "🎯"
+      id: "analytics",
+      title: "Advanced Analytics",
+      description: "Real-time call performance metrics, detailed conversation transcripts, ROI tracking, and predictive analytics for call outcomes.",
+      icon: "📊"
     }
   ];
 
   const deployFeatures = [
     {
-      title: "Display Branded Call ID",
-      description: "Enable Retell AI's Branded Call feature to unlock new levels of customer trust and satisfaction for outbound call operations.",
-      icon: "🏷️"
+      title: "Voice Technology",
+      description: "Crystal-clear voice quality with minimal latency, real-time voice modulation and personalization, advanced noise reduction and echo cancellation.",
+      icon: "🎙️"
     },
     {
-      title: "Using SIP Trunking Connect to Any Telephony", 
-      description: "Use your existing phone numbers or your familiar VOIP providers. You can connect to any telephony using Retell SIP Trunking.",
-      providers: ["Twilio", "Vonage", "Telnyx", "Plivo", "RingCentral"],
-      icon: "🔗"
+      title: "Security & Compliance", 
+      description: "End-to-end encryption for all communications, GDPR, HIPAA, and PCI DSS compliance, secure data storage and regular security audits.",
+      providers: ["GDPR", "HIPAA", "PCI DSS", "ISO 27001", "SOC 2"],
+      icon: "🔒"
     }
   ];
 

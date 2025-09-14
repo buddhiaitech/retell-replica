@@ -26,17 +26,17 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-8xl font-bold text-foreground mb-8 leading-tight">
-            Supercharge your{" "}
+            Intelligent AI Voice{" "}
             <span className="text-foreground">
-              Call Operations
+              Calling Center
             </span>{" "}
-            with Voice AI
+            Platform
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            Discover the new way to build, test, deploy, and monitor
+            Transform Your Business Communication with Advanced AI Voice Technology.
             <br />
-            production-ready AI voice agents at scale.
+            Deliver human-like conversations at scale, enabling 24/7 service excellence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">

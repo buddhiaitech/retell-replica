@@ -27,46 +27,32 @@ const UseCasesSection = () => {
 
   const useCases = [
     {
-      id: "receptionist",
-      title: "Receptionist",
-      description: "Handle incoming calls and route them appropriately with professional AI reception services that never miss a call.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop",
-      features: ["24/7 Availability", "Call Routing", "Message Taking", "Appointment Scheduling"]
-    },
-    {
-      id: "appointment",
-      title: "Appointment Setter",
-      description: "Schedule appointments seamlessly with natural conversation, integrating with your calendar systems automatically.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop",
-      features: ["Calendar Integration", "Automated Scheduling", "Reminder Calls", "Rescheduling"]
-    },
-    {
-      id: "lead",
-      title: "Lead Qualification",
-      description: "Qualify leads effectively with intelligent questioning and route qualified prospects to your sales team.",
+      id: "sales-lead",
+      title: "Sales & Lead Qualification",
+      description: "Automated lead qualification and scoring with follow-up calls for warm prospects, product demonstrations and appointment scheduling.",
       image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=300&fit=crop",
-      features: ["Smart Qualification", "Lead Scoring", "CRM Integration", "Follow-up Automation"]
+      features: ["Lead Qualification", "Follow-up Calls", "Product Demos", "Appointment Confirmation"]
     },
     {
-      id: "survey",
-      title: "Survey",
-      description: "Conduct surveys with engaging conversational AI that increases response rates and gathers valuable insights.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      features: ["High Response Rates", "Real-time Analytics", "Custom Questions", "Data Export"]
-    },
-    {
-      id: "customer-service",
-      title: "Customer Service",
-      description: "Provide 24/7 customer support with AI agents that can handle complex queries and escalate when needed.",
+      id: "customer-support",
+      title: "Customer Support",
+      description: "24/7 first-level technical support with order status inquiries, billing management, and complaint resolution.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-      features: ["24/7 Support", "Multi-language", "Issue Resolution", "Escalation Management"]
+      features: ["24/7 Support", "Order Inquiries", "Billing Management", "Complaint Resolution"]
     },
     {
-      id: "debt-collection",
-      title: "Debt Collection",
-      description: "Handle debt collection calls professionally and efficiently while maintaining compliance with regulations.",
-      image: "https://images.unsplash.com/photo-1554224154-26032fced8bd?w=400&h=300&fit=crop",
-      features: ["Compliance Ready", "Payment Processing", "Documentation", "Escalation Protocols"]
+      id: "marketing-surveys",
+      title: "Marketing & Surveys",
+      description: "Market research and customer feedback collection, event invitations, satisfaction surveys, and brand awareness campaigns.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      features: ["Market Research", "Event Management", "Customer Surveys", "Brand Campaigns"]
+    },
+    {
+      id: "healthcare",
+      title: "Healthcare & Appointments",
+      description: "Patient appointment scheduling and reminders, medication adherence follow-ups, post-treatment check-ins, and insurance verification.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      features: ["Appointment Scheduling", "Medication Follow-ups", "Check-ins", "Insurance Verification"]
     }
   ];
 

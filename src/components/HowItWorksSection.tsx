@@ -5,23 +5,23 @@ const HowItWorksSection = () => {
   const steps = [
     {
       number: "01",
-      title: "Build",
-      description: "Utilize the voice AI API and our intuitive agent builder to create custom voice AI callers effortlessly."
+      title: "Setup",
+      description: "Configure your AI voice agents with our drag-and-drop conversation builder and custom voice training for brand consistency."
     },
     {
       number: "02", 
-      title: "Test",
-      description: "Perform comprehensive agent testing with built-in LLM features to ensure seamless handling of edge cases."
+      title: "Integrate",
+      description: "Seamlessly integrate with your existing CRM systems, business tools, and telephony infrastructure for unified operations."
     },
     {
       number: "03",
       title: "Deploy", 
-      description: "Easily deploy your agents for AI phone calls, web calls, SMS, chat, and more."
+      description: "Launch your intelligent voice agents for inbound and outbound calling campaigns with real-time monitoring capabilities."
     },
     {
       number: "04",
-      title: "Monitor",
-      description: "Artificial Intelligence tracks success rates, latency, and user sentiment through call history dashboard. Quickly identify failed calls."
+      title: "Optimize",
+      description: "Analyze performance metrics, conversation transcripts, and ROI tracking to continuously improve call outcomes and efficiency."
     }
   ];
 

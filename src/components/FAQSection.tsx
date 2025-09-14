@@ -23,36 +23,36 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is Retell AI and how does it work?",
-      answer: "Retell AI is a comprehensive platform for building, testing, deploying, and monitoring production-ready AI voice agents at scale. Our platform uses advanced natural language processing and voice synthesis to create human-like conversational experiences for your customers."
+      question: "What is Buddhi Voice and how does it work?",
+      answer: "Buddhi Voice is a cutting-edge AI-powered voice calling center platform that revolutionizes how businesses handle customer interactions, sales calls, and support operations. Our intelligent voice agents deliver human-like conversations at scale using advanced natural language processing and voice synthesis."
     },
     {
-      question: "How quickly can I get started with Retell AI?",
-      answer: "You can get started in minutes! Simply sign up for our free trial, use our intuitive agent builder to create your first voice agent, test it with our built-in tools, and deploy it across multiple channels including phone calls, web calls, and SMS."
+      question: "What are the key features of Buddhi Voice?",
+      answer: "Buddhi Voice offers smart voice agents with natural language processing, omnichannel integration with CRM systems, customizable call flows with drag-and-drop builder, and advanced analytics with real-time performance metrics and ROI tracking."
     },
     {
-      question: "What types of use cases does Retell AI support?",
-      answer: "Retell AI supports a wide range of use cases including customer service, appointment setting, lead qualification, surveys, debt collection, receptionist services, and more. Our platform is flexible enough to handle any conversational AI scenario."
+      question: "What use cases does Buddhi Voice support?",
+      answer: "Buddhi Voice supports sales & lead qualification, customer support operations, marketing & surveys, and healthcare & appointment management. Our platform is designed to handle complex conversations across various business scenarios."
     },
     {
-      question: "Can I integrate Retell AI with my existing systems?",
-      answer: "Yes! Retell AI offers robust API integrations and supports popular telephony providers like Twilio, Vonage, Telnyx, Plivo, and RingCentral. You can also integrate with your CRM, calendar systems, and knowledge bases for seamless operation."
+      question: "How secure is Buddhi Voice?",
+      answer: "Buddhi Voice implements enterprise-grade security with end-to-end encryption for all communications, GDPR, HIPAA, and PCI DSS compliance, secure data storage and processing, plus regular security audits and penetration testing."
     },
     {
-      question: "How does pricing work for Retell AI?",
-      answer: "We offer flexible pricing based on your usage needs. Start with our free trial to test the platform, then choose from our scalable plans that grow with your business. Contact our sales team for enterprise pricing and custom solutions."
+      question: "What are the pricing plans for Buddhi Voice?",
+      answer: "We offer three plans: Starter Plan at ₹9,999/month (up to 1,000 minutes), Professional Plan at ₹24,999/month (up to 5,000 minutes with advanced features), and Enterprise Plan with custom pricing for unlimited minutes and white-label solutions."
     },
     {
-      question: "Is my data secure with Retell AI?",
-      answer: "Absolutely! We implement enterprise-grade security measures including end-to-end encryption, secure data centers, compliance with industry standards, and regular security audits. Your data privacy and security are our top priorities."
+      question: "What technology powers Buddhi Voice?",
+      answer: "Buddhi Voice is powered by advanced AI & machine learning including Natural Language Understanding (NLU), text-to-speech with human-like voice synthesis, speech-to-text with noise cancellation, and machine learning algorithms for continuous improvement."
     },
     {
-      question: "What kind of support do you provide?",
-      answer: "We provide comprehensive support including detailed documentation, video tutorials, community forums, and direct customer support. Enterprise customers also get dedicated account management and priority support."
+      question: "How can Buddhi Voice reduce costs?",
+      answer: "Buddhi Voice can reduce staffing costs by up to 70%, increase efficiency with 24/7 availability, improve customer satisfaction with consistent service quality, and provide scalability to handle varying call volumes without additional staffing."
     },
     {
-      question: "Can I customize the voice and personality of my AI agents?",
-      answer: "Yes! You can fully customize your AI agents' voice, tone, personality, and conversation flow. Our platform supports multiple voice options and allows you to train agents with your specific brand voice and communication style."
+      question: "Can I integrate Buddhi Voice with my existing systems?",
+      answer: "Yes! Buddhi Voice offers seamless integration with popular business tools including Salesforce, HubSpot, and Zendesk. We support various CRM platforms and provide custom integrations and API access for enterprise customers."
     }
   ];
 
