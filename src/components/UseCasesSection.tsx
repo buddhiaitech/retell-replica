@@ -6,6 +6,7 @@ import { ShineBorder } from "@/components/ui/shine-border";
 import { useState, useEffect, useRef } from "react";
 import customerSupportImage from "@/assets/customer-support.jpg";
 import healthcareVoiceImage from "@/assets/healthcare-voice.jpg";
+import salesLeadImage from "@/assets/sales-lead.jpg";
 
 
 const UseCasesSection = () => {
@@ -35,7 +36,7 @@ const UseCasesSection = () => {
       id: "sales-lead",
       title: "Sales & Lead Qualification",
       description: "Automated lead qualification and scoring with follow-up calls for warm prospects, product demonstrations and appointment scheduling.",
-      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=300&fit=crop",
+      image: salesLeadImage,
       features: ["Lead Qualification", "Follow-up Calls", "Product Demos", "Appointment Confirmation"]
     },
     {
