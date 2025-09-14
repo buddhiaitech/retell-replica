@@ -28,26 +28,20 @@ const HeroSection = () => {
       {/* Content with Enhanced Animations */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-8xl font-bold text-foreground mb-8 leading-tight">
-            Intelligent <span className="text-sky-300">AI</span> Voice{" "}
-            <span className="text-sky-300">
-              Calling
-            </span> Center{" "}
-            Platform
+          <h1 className="text-4xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
+            Supercharge your{" "}
+            <span className="text-blue-400">Call Operations</span>{" "}
+            with Voice AI
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform Your Business Communication with Advanced AI Voice Technology.
-            <br />
-            Deliver human-like conversations at scale, enabling 24/7 service excellence.
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-normal">
+            Discover the new way to build, test, deploy, and monitor 
+            production-ready AI voice agents at scale.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button size="lg" className="bg-primary text-white px-10 py-8 text-xl font-bold">
+          <div className="flex justify-center mb-16">
+            <Button size="lg" className="bg-foreground text-background px-8 py-6 text-lg font-medium rounded-lg">
               TRY FOR FREE
-            </Button>
-            <Button variant="outline" size="lg" className="border-2 border-primary text-primary px-10 py-8 text-xl font-bold">
-              CONTACT SALES
             </Button>
           </div>
         </div>
