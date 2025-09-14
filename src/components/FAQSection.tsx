@@ -72,7 +72,7 @@ const FAQSection = () => {
           </Badge>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-retell-blue to-retell-cyan bg-clip-text text-transparent">
+            <span className="text-blue-400">
               Questions
             </span>
           </h2>
