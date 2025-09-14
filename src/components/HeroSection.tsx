@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+import { SoundWaveAnimation } from "./SoundWaveAnimation";
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,6 +22,8 @@ const HeroSection = () => {
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      {/* Sound Wave Background Animation */}
+      <SoundWaveAnimation className="z-0" />
       
       {/* Content with Enhanced Animations */}
       <div className="relative z-10 container mx-auto px-6 text-center">
