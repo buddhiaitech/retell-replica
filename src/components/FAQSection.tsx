@@ -75,9 +75,8 @@ const FAQSection = () => {
             </h2>
             
             {/* Orb Animation */}
-            <div className="w-48 h-48 mx-auto lg:mx-0">
+            <div className="w-32 h-32 mx-auto lg:mx-0">
               <Orb 
-                hue={200} 
                 hoverIntensity={0.25} 
                 rotateOnHover={true}
                 forceHoverState={false}
