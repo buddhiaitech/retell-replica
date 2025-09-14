@@ -3,12 +3,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect, useRef } from "react";
-import AgentFeaturesSection from "./AgentFeaturesSection";
+
 
 const UseCasesSection = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [activeUseCase, setActiveUseCase] = useState("sales-lead");
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -112,7 +113,7 @@ const UseCasesSection = () => {
         {/* Enhanced Use Cases Tabs */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12 animate-fade-in">Use Cases</h2>
-          <Tabs defaultValue="receptionist" className="w-full">
+          <Tabs value={activeUseCase} onValueChange={setActiveUseCase} className="w-full">
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12 bg-muted/50 p-2 rounded-2xl justify-center mx-auto max-w-4xl">
               {useCases.map((useCase) => (
                 <TabsTrigger 
@@ -170,13 +171,6 @@ const UseCasesSection = () => {
           </Tabs>
         </div>
 
-        {/* Powerful AI Agent Creation Features */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            Powerful AI Agent Creation Features
-          </h2>
-          <AgentFeaturesSection />
-        </div>
       </div>
     </section>
   );
