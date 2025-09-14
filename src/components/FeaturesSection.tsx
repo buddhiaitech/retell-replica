@@ -48,9 +48,6 @@ const FeaturesSection = () => {
         {/* Deploy Features */}
         <div className="bg-blue-50 rounded-3xl p-12">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4 px-6 py-2 text-sm font-medium bg-blue-100 text-blue-900 border-0">
-              Deploy
-            </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Effortlessly Deploy AI Calls
             </h2>

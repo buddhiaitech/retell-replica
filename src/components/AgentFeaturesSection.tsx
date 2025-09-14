@@ -75,7 +75,7 @@ const AgentFeaturesSection = () => {
           </div>
 
           {/* Right side - Image/Content */}
-          <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-8 flex items-center justify-center">
+          <div className="bg-white p-8 flex items-center justify-center">
             <div className="relative">
               <img 
                 src={features[selectedFeature].image}

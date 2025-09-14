@@ -37,9 +37,6 @@ const HowItWorksSection = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 px-6 py-2 text-sm font-medium bg-retell-cyan/20 text-retell-blue border-0">
-            Value
-          </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             How it Works
           </h2>

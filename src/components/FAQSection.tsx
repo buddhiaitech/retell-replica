@@ -69,9 +69,6 @@ const FAQSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Title and Description */}
           <div className="space-y-6">
-            <Badge variant="secondary" className="mb-4 px-6 py-2 text-sm font-medium bg-purple-100 text-purple-900 border-0">
-              FAQ
-            </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               Everything You Need to Know About Buddhi's AI Voice Agents
             </h2>
