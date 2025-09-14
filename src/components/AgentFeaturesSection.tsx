@@ -55,7 +55,9 @@ const AgentFeaturesSection = () => {
                   }`}
                 >
                   <div className="flex items-start space-x-3">
-                    <IconComponent className="w-6 h-6 text-gray-600 mt-1" />
+                    <IconComponent className={`w-6 h-6 mt-1 transition-colors duration-200 ${
+                      selectedFeature === index ? 'text-blue-400' : 'text-gray-600'
+                    }`} />
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-2">
                         {feature.title}

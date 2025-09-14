@@ -45,10 +45,10 @@ const HowItWorksSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
-            <Card key={step.number} className="border border-border bg-card hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-8 text-center">
+            <Card key={step.number} className="border border-border bg-card h-80 w-full">
+              <CardContent className="p-6 text-center">
                 <div className="mb-6">
                   <span className="text-6xl font-bold text-muted-foreground">
                     {step.number}
@@ -60,7 +60,7 @@ const HowItWorksSection = () => {
                 <p className="text-muted-foreground leading-relaxed text-sm mb-6">
                   {step.description}
                 </p>
-                <div className="w-full h-48 bg-muted/20 rounded-lg overflow-hidden">
+                <div className="w-full h-32 bg-muted/20 rounded-lg overflow-hidden">
                   <img 
                     src={step.gif} 
                     alt={`${step.title} demonstration`}
