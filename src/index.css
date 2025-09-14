@@ -146,4 +146,26 @@
   .transition-bounce {
     transition: var(--transition-bounce);
   }
+  
+  /* Story link with underline animation */
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+  
+  /* Hover scale animation */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  /* Parallax scroll effect */
+  .parallax-slow {
+    transform: translateY(var(--scroll-offset, 0));
+  }
+  
+  /* Glass morphism effect */
+  .glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
