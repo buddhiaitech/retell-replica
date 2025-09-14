@@ -66,7 +66,7 @@ const UseCasesSection = () => {
         <div className="max-w-5xl mx-auto text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
             Try Our{" "}
-            <span className="bg-gradient-to-r from-retell-blue to-retell-cyan bg-clip-text text-transparent">
+            <span className="text-blue-500">
               Live Demo
             </span>
           </h2>
@@ -119,7 +119,7 @@ const UseCasesSection = () => {
                 <TabsTrigger 
                   key={useCase.id} 
                   value={useCase.id}
-                  className="text-xs lg:text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 rounded-xl text-center"
+                  className="text-xs lg:text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-500 ease-in-out transform hover:scale-105 rounded-xl text-center"
                 >
                   {useCase.title}
                 </TabsTrigger>
@@ -128,10 +128,10 @@ const UseCasesSection = () => {
             
             {useCases.map((useCase, index) => (
               <TabsContent key={useCase.id} value={useCase.id} className="mt-8">
-                <Card className="border border-border">
+                <Card className="border border-border transition-all duration-500 ease-in-out animate-fade-in">
                   <CardContent className="p-10">
                     <div className="grid lg:grid-cols-2 gap-10 items-center">
-                      <div className="space-y-6">
+                      <div className="space-y-6 transform transition-all duration-500 ease-in-out">
                         <h3 className="text-3xl font-bold text-foreground">
                           {useCase.title}
                         </h3>
@@ -142,7 +142,7 @@ const UseCasesSection = () => {
                         {/* Feature List */}
                         <div className="grid grid-cols-2 gap-3">
                           {useCase.features.map((feature, i) => (
-                            <div key={i} className="flex items-center space-x-2">
+                            <div key={i} className="flex items-center space-x-2 transform transition-all duration-300 ease-in-out hover:translate-x-1">
                               <div className="w-2 h-2 bg-primary rounded-full"></div>
                               <span className="text-sm text-muted-foreground">{feature}</span>
                             </div>
@@ -151,16 +151,16 @@ const UseCasesSection = () => {
                         
                         <Button 
                           variant="outline" 
-                          className="border-2 border-primary text-primary px-8 py-6 text-lg font-semibold"
+                          className="border-2 border-primary text-primary px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105"
                         >
                           Learn More
                         </Button>
                       </div>
-                      <div className="relative">
+                      <div className="relative transform transition-all duration-500 ease-in-out">
                         <img 
                           src={useCase.image} 
                           alt={useCase.title}
-                          className="w-full h-80 object-cover rounded-2xl"
+                          className="w-full h-80 object-cover rounded-2xl transition-all duration-300 hover:scale-105"
                         />
                       </div>
                     </div>
