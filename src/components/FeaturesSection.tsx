@@ -51,7 +51,7 @@ const FeaturesSection = () => {
             <Badge variant="secondary" className="mb-4 px-6 py-2 text-sm font-medium bg-blue-100 text-blue-900 border-0">
               Deploy
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Effortlessly Deploy AI Calls
             </h2>
           </div>
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
                     {deployFeatures[0].description}
                   </p>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-48 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
                   <img 
                     src={buddhiCall} 
                     alt="Branded Call ID demonstration"
@@ -96,7 +96,7 @@ const FeaturesSection = () => {
                     ))}
                   </div>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg h-24 overflow-hidden">
                   <video 
                     src={sipTrunkingVideo} 
                     autoPlay 
@@ -119,7 +119,7 @@ const FeaturesSection = () => {
                     {deployFeatures[2].description}
                   </p>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-48 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
                   <video 
                     src={sipTrunkingVideo} 
                     autoPlay 
@@ -142,7 +142,7 @@ const FeaturesSection = () => {
                     {deployFeatures[3].description}
                   </p>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-48 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
                   <img 
                     src={verifiedNumbers} 
                     alt="Verified Phone Numbers demonstration"
