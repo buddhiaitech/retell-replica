@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        retell: {
+          blue: "hsl(var(--retell-blue))",
+          cyan: "hsl(var(--retell-cyan))",
+          dark: "hsl(var(--retell-dark))",
+          gray: "hsl(var(--retell-gray))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
