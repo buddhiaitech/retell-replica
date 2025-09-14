@@ -42,8 +42,8 @@ const HeroSection = () => {
           <div className="flex justify-center mb-16">
             <ShimmerButton 
               shimmerColor="#60a5fa" 
-              background="rgba(15, 23, 42, 1)"
-              className="px-8 py-6 text-lg font-medium"
+              background="rgba(255, 255, 255, 1)"
+              className="px-8 py-6 text-lg font-medium text-foreground"
             >
               TRY FOR FREE
             </ShimmerButton>
