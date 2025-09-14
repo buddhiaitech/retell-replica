@@ -128,7 +128,18 @@ export default {
         "glow": {
           "0%, 100%": { boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" },
           "50%": { boxShadow: "0 0 40px rgba(59, 130, 246, 0.6)" }
-        }
+        },
+        "aurora": {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -143,6 +154,7 @@ export default {
         "exit": "fade-out 0.3s ease-out, scale-out 0.2s ease-out",
         "float": "float 3s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite alternate",
+        "aurora": "aurora 8s ease-in-out infinite",
         "shimmer-slide": "shimmer-slide var(--speed) ease-in-out infinite alternate",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear"
       },

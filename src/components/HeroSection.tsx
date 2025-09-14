@@ -1,4 +1,5 @@
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { AuroraText } from "@/components/ui/aurora-text";
 import { useEffect, useRef } from "react";
 import { SoundWaveAnimation } from "./SoundWaveAnimation";
 
@@ -30,7 +31,12 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
             Supercharge your{" "}
-            <span className="text-blue-400">Call Operations</span>{" "}
+            <AuroraText 
+              colors={["#60a5fa", "#3b82f6", "#1d4ed8", "#93c5fd"]}
+              speed={1.5}
+            >
+              Call Operations
+            </AuroraText>{" "}
             with Voice AI
           </h1>
           
