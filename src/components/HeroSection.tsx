@@ -23,6 +23,13 @@ const HeroSection = () => {
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      {/* Logo */}
+      <div className="absolute top-8 left-8 z-20">
+        <h2 className="text-2xl font-bold">
+          Buddhi Voice <span className="text-blue-600">AI</span>
+        </h2>
+      </div>
+      
       {/* Sound Wave Background Animation */}
       <SoundWaveAnimation className="z-0" />
       

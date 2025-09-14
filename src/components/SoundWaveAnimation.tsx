@@ -35,10 +35,10 @@ export function SoundWaveAnimation({ className }: SoundWaveAnimationProps) {
       speed: number
       color: string
     }> = [
-      { amplitude: 30, frequency: 0.01, phase: 0, speed: 0.01, color: 'rgba(59, 130, 246, 0.4)' },
-      { amplitude: 20, frequency: 0.015, phase: Math.PI / 3, speed: 0.012, color: 'rgba(147, 197, 253, 0.3)' },
-      { amplitude: 25, frequency: 0.008, phase: Math.PI / 2, speed: 0.009, color: 'rgba(96, 165, 250, 0.35)' },
-      { amplitude: 15, frequency: 0.012, phase: Math.PI, speed: 0.015, color: 'rgba(37, 99, 235, 0.25)' },
+      { amplitude: 45, frequency: 0.01, phase: 0, speed: 0.01, color: 'rgba(59, 130, 246, 0.4)' },
+      { amplitude: 30, frequency: 0.015, phase: Math.PI / 3, speed: 0.012, color: 'rgba(147, 197, 253, 0.3)' },
+      { amplitude: 35, frequency: 0.008, phase: Math.PI / 2, speed: 0.009, color: 'rgba(96, 165, 250, 0.35)' },
+      { amplitude: 25, frequency: 0.012, phase: Math.PI, speed: 0.015, color: 'rgba(37, 99, 235, 0.25)' },
     ]
 
     // Animation loop
@@ -77,5 +77,5 @@ export function SoundWaveAnimation({ className }: SoundWaveAnimationProps) {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className={`absolute w-full h-[400px] opacity-80 ${className}`} aria-hidden="true" />
+  return <canvas ref={canvasRef} className={`absolute w-full h-[600px] opacity-80 ${className}`} aria-hidden="true" />
 }
