@@ -19,7 +19,7 @@ const TeamSection = () => {
             <img 
               src={teamPhoto} 
               alt="Our dedicated team of AI voice technology experts" 
-              className="w-full h-auto object-cover"
+              className="w-full h-64 object-cover"
             />
           </div>
           

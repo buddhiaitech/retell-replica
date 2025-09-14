@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useEffect, useRef } from "react";
 import { SoundWaveAnimation } from "./SoundWaveAnimation";
 
@@ -40,9 +40,13 @@ const HeroSection = () => {
           </p>
           
           <div className="flex justify-center mb-16">
-            <Button size="lg" className="bg-foreground text-background px-8 py-6 text-lg font-medium rounded-lg">
+            <ShimmerButton 
+              shimmerColor="#60a5fa" 
+              background="rgba(15, 23, 42, 1)"
+              className="px-8 py-6 text-lg font-medium"
+            >
               TRY FOR FREE
-            </Button>
+            </ShimmerButton>
           </div>
         </div>
       </div>

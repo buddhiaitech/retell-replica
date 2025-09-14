@@ -53,44 +53,98 @@ const FeaturesSection = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
-            {deployFeatures.map((feature, index) => (
-              <Card key={index} className="bg-white border-0 rounded-2xl overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="text-2xl">{feature.icon}</div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
+          <div className="grid grid-cols-2 gap-6">
+            {/* First Card - Small */}
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden row-span-1">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-2xl">{deployFeatures[0].icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                      {deployFeatures[0].title}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {deployFeatures[0].description}
+                    </p>
                   </div>
-                  
-                  {feature.providers && (
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-2 justify-center opacity-40">
-                        {feature.providers.map((provider, i) => (
-                          <div key={i} className="text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded">
-                            {provider}
-                          </div>
-                        ))}
+                </div>
+                <div className="mt-4 bg-slate-100 rounded-lg h-32 flex items-center justify-center">
+                  <div className="w-20 h-24 bg-slate-800 rounded-lg flex items-center justify-center">
+                    <div className="w-16 h-20 bg-slate-600 rounded-md"></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Second Card - Large */}
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden row-span-2">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-2xl">{deployFeatures[1].icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                      {deployFeatures[1].title}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {deployFeatures[1].description}
+                    </p>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2 justify-center opacity-40">
+                    {deployFeatures[1].providers?.map((provider, i) => (
+                      <div key={i} className="text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded">
+                        {provider}
                       </div>
-                    </div>
-                  )}
-                  
-                  {feature.hasImage && (
-                    <div className="mt-4 bg-slate-100 rounded-lg h-24 flex items-center justify-center">
-                      <div className="w-16 h-20 bg-slate-800 rounded-lg flex items-center justify-center">
-                        <div className="w-12 h-16 bg-slate-600 rounded-md"></div>
-                      </div>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Third Card - Large */}
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden row-span-2">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-2xl">{deployFeatures[2].icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                      {deployFeatures[2].title}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {deployFeatures[2].description}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 bg-slate-100 rounded-lg h-48 flex items-center justify-center">
+                  <div className="w-24 h-32 bg-slate-800 rounded-lg flex items-center justify-center">
+                    <div className="w-20 h-28 bg-slate-600 rounded-md"></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Fourth Card - Small */}
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden row-span-1">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-2xl">{deployFeatures[3].icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                      {deployFeatures[3].title}
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {deployFeatures[3].description}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 bg-slate-100 rounded-lg h-32 flex items-center justify-center">
+                  <div className="w-20 h-24 bg-slate-800 rounded-lg flex items-center justify-center">
+                    <div className="w-16 h-20 bg-slate-600 rounded-md"></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
