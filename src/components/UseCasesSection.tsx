@@ -166,7 +166,7 @@ const UseCasesSection = () => {
                         <img 
                           src={useCase.image} 
                           alt={useCase.title}
-                          className="w-full h-80 object-cover rounded-2xl transition-all duration-300 hover:scale-105"
+                          className="w-full h-80 object-cover rounded-2xl"
                         />
                       </div>
                     </div>

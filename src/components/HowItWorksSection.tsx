@@ -55,11 +55,11 @@ const HowItWorksSection = () => {
                 <p className="text-muted-foreground leading-relaxed text-sm mb-6">
                   {step.description}
                 </p>
-                <div className="w-full h-32 rounded-lg overflow-hidden border border-border/50">
+                <div className="w-full h-24 rounded-lg overflow-hidden border border-border/50">
                   <img 
                     src={step.gif} 
                     alt={`${step.title} demonstration`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </CardContent>

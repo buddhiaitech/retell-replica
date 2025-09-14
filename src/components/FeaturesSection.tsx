@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import AgentFeaturesSection from "./AgentFeaturesSection";
+import buddhiCall from "@/assets/buddhi-call.png";
+import sipTrunkingVideo from "@/assets/sip-trunking-video.mp4";
+import verifiedNumbers from "@/assets/verified-numbers.gif";
 
 const FeaturesSection = () => {
   const deployFeatures = [
@@ -68,10 +71,12 @@ const FeaturesSection = () => {
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 bg-slate-100 rounded-lg h-32 flex items-center justify-center">
-                  <div className="w-20 h-24 bg-slate-800 rounded-lg flex items-center justify-center">
-                    <div className="w-16 h-20 bg-slate-600 rounded-md"></div>
-                  </div>
+                <div className="mt-4 bg-slate-100 rounded-lg h-32 overflow-hidden">
+                  <img 
+                    src={buddhiCall} 
+                    alt="Branded Call ID demonstration"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -91,12 +96,21 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <div className="flex flex-wrap gap-2 justify-center opacity-40">
+                  <div className="flex flex-wrap gap-2 justify-center opacity-40 mb-4">
                     {deployFeatures[1].providers?.map((provider, i) => (
                       <div key={i} className="text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded">
                         {provider}
                       </div>
                     ))}
+                  </div>
+                  <div className="bg-slate-100 rounded-lg h-32 overflow-hidden">
+                    <video 
+                      src={sipTrunkingVideo} 
+                      autoPlay 
+                      loop 
+                      muted 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </CardContent>
@@ -138,10 +152,12 @@ const FeaturesSection = () => {
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 bg-slate-100 rounded-lg h-32 flex items-center justify-center">
-                  <div className="w-20 h-24 bg-slate-800 rounded-lg flex items-center justify-center">
-                    <div className="w-16 h-20 bg-slate-600 rounded-md"></div>
-                  </div>
+                <div className="mt-4 bg-slate-100 rounded-lg h-32 overflow-hidden">
+                  <img 
+                    src={verifiedNumbers} 
+                    alt="Verified Phone Numbers demonstration"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </CardContent>
             </Card>
