@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect, useRef } from "react";
+import AgentFeaturesSection from "./AgentFeaturesSection";
 
 const UseCasesSection = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -169,15 +170,12 @@ const UseCasesSection = () => {
           </Tabs>
         </div>
 
-        {/* Enhanced Customer Stories CTA */}
-        <div className="text-center">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-2 border-primary text-primary px-10 py-6 text-xl font-bold"
-          >
-            SEE CUSTOMER STORIES
-          </Button>
+        {/* Powerful AI Agent Creation Features */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
+            Powerful AI Agent Creation Features
+          </h2>
+          <AgentFeaturesSection />
         </div>
       </div>
     </section>
