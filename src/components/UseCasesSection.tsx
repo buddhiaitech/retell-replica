@@ -60,7 +60,7 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white">
+    <section ref={sectionRef} className="pt-0 pb-0 bg-white">
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Enhanced Live Demo Section */}

@@ -22,7 +22,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pb-0">
       {/* Logo */}
       <div className="absolute top-8 left-8 z-20">
         <h2 className="text-2xl font-bold">
