@@ -39,10 +39,10 @@ const HowItWorksSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <Card key={step.number} className="gradient-card shadow-card border-0 group hover:shadow-lg transition-smooth">
+            <Card key={step.number} className="border border-border">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
-                  <span className="text-6xl font-bold text-retell-blue/20 group-hover:text-retell-blue/40 transition-smooth">
+                  <span className="text-6xl font-bold text-muted-foreground">
                     {step.number}
                   </span>
                 </div>

@@ -82,20 +82,19 @@ const FAQSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="glass border-0 shadow-2xl animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <Card className="border border-border">
             <CardContent className="p-8">
               <Accordion type="single" collapsible className="w-full space-y-4">
                 {faqs.map((faq, index) => (
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="border border-border/50 rounded-lg px-6 py-2 hover:shadow-lg transition-all duration-300 hover:border-retell-blue/30 group animate-fade-in"
-                    style={{ animationDelay: `${0.8 + index * 0.1}s` }}
+                    className="border border-border rounded-lg px-6 py-2"
                   >
-                    <AccordionTrigger className="text-left font-semibold text-lg text-foreground hover:text-primary transition-all duration-300 hover:no-underline group-hover:translate-x-2">
+                    <AccordionTrigger className="text-left font-semibold text-lg text-foreground">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-base leading-relaxed pt-4 animate-accordion-down">
+                    <AccordionContent className="text-muted-foreground text-base leading-relaxed pt-4">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -103,24 +102,6 @@ const FAQSection = () => {
               </Accordion>
             </CardContent>
           </Card>
-
-          {/* CTA Section */}
-          <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '1.6s' }}>
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Still have questions?
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              Our team is here to help you get started with Retell AI.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-retell-blue hover:bg-retell-blue/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                Contact Support
-              </button>
-              <button className="px-8 py-4 border-2 border-retell-blue text-retell-blue hover:bg-retell-blue hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Schedule Demo
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

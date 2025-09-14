@@ -71,12 +71,7 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
-      {/* Parallax Background Elements */}
-      <div className="absolute inset-0 parallax-slow">
-        <div className="absolute top-32 right-20 w-40 h-40 bg-retell-blue/10 rounded-full blur-2xl animate-float"></div>
-        <div className="absolute bottom-40 left-16 w-56 h-56 bg-retell-cyan/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }}></div>
-      </div>
+    <section ref={sectionRef} className="py-24 bg-white">
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Enhanced Live Demo Section */}
@@ -91,7 +86,7 @@ const UseCasesSection = () => {
             Discover how our AI caller transforms customer conversations.
           </p>
           
-          <Card className="glass shadow-2xl border-0 max-w-3xl mx-auto hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <Card className="border border-border max-w-3xl mx-auto">
             <CardContent className="p-10">
               <h3 className="text-2xl font-bold mb-8 text-foreground">
                 Receive a live call from our agent
@@ -101,23 +96,23 @@ const UseCasesSection = () => {
                   placeholder="Phone Number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
-                  className="h-14 text-lg transition-all duration-300 focus:scale-105"
+                  className="h-14 text-lg"
                 />
                 <Input
                   placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="h-14 text-lg transition-all duration-300 focus:scale-105"
+                  className="h-14 text-lg"
                 />
                 <Input
                   placeholder="Email Address"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="h-14 text-lg transition-all duration-300 focus:scale-105"
+                  className="h-14 text-lg"
                 />
                 <Button 
-                  className="w-full h-16 bg-retell-blue hover:bg-retell-blue/90 text-white text-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl animate-glow"
+                  className="w-full h-16 bg-primary text-white text-xl font-bold"
                   size="lg"
                 >
                   Request Demo Call
@@ -145,7 +140,7 @@ const UseCasesSection = () => {
             
             {useCases.map((useCase, index) => (
               <TabsContent key={useCase.id} value={useCase.id} className="mt-8">
-                <Card className="glass shadow-2xl border-0 hover-scale animate-fade-in">
+                <Card className="border border-border">
                   <CardContent className="p-10">
                     <div className="grid lg:grid-cols-2 gap-10 items-center">
                       <div className="space-y-6">
@@ -160,7 +155,7 @@ const UseCasesSection = () => {
                         <div className="grid grid-cols-2 gap-3">
                           {useCase.features.map((feature, i) => (
                             <div key={i} className="flex items-center space-x-2">
-                              <div className="w-2 h-2 bg-retell-blue rounded-full"></div>
+                              <div className="w-2 h-2 bg-primary rounded-full"></div>
                               <span className="text-sm text-muted-foreground">{feature}</span>
                             </div>
                           ))}
@@ -168,17 +163,16 @@ const UseCasesSection = () => {
                         
                         <Button 
                           variant="outline" 
-                          className="border-2 border-retell-blue text-retell-blue hover:bg-retell-blue hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-lg px-8 py-6 text-lg font-semibold"
+                          className="border-2 border-primary text-primary px-8 py-6 text-lg font-semibold"
                         >
                           Learn More
                         </Button>
                       </div>
-                      <div className="relative group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-retell-blue/20 to-retell-cyan/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                      <div className="relative">
                         <img 
                           src={useCase.image} 
                           alt={useCase.title}
-                          className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-all duration-500"
+                          className="w-full h-80 object-cover rounded-2xl"
                         />
                       </div>
                     </div>
@@ -194,7 +188,7 @@ const UseCasesSection = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-3 border-retell-blue text-retell-blue hover:bg-retell-blue hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl px-10 py-6 text-xl font-bold animate-fade-in"
+            className="border-2 border-primary text-primary px-10 py-6 text-xl font-bold"
           >
             SEE CUSTOMER STORIES
           </Button>

@@ -74,7 +74,7 @@ const FeaturesSection = () => {
             
             {buildFeatures.map((feature) => (
               <TabsContent key={feature.id} value={feature.id} className="mt-8">
-                <Card className="gradient-card shadow-card border-0">
+                <Card className="border border-border">
                   <CardContent className="p-8">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                       <div>
@@ -87,13 +87,13 @@ const FeaturesSection = () => {
                         </p>
                         <Button 
                           variant="outline" 
-                          className="border-retell-blue text-retell-blue hover:bg-retell-blue hover:text-white transition-bounce"
+                          className="border-primary text-primary"
                         >
                           Learn More
                         </Button>
                       </div>
                       <div className="relative">
-                        <div className="w-full h-64 bg-gradient-to-br from-retell-cyan/20 to-retell-blue/20 rounded-lg flex items-center justify-center">
+                        <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
                           <span className="text-6xl">{feature.icon}</span>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ const FeaturesSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {deployFeatures.map((feature, index) => (
-              <Card key={index} className="gradient-card shadow-card border-0 group hover:shadow-lg transition-smooth">
+              <Card key={index} className="border border-border">
                 <CardContent className="p-8">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -143,7 +143,7 @@ const FeaturesSection = () => {
                   
                   <Button 
                     variant="outline" 
-                    className="border-retell-blue text-retell-blue hover:bg-retell-blue hover:text-white transition-bounce"
+                    className="border-primary text-primary"
                   >
                     Learn More
                   </Button>
