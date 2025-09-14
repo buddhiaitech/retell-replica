@@ -140,6 +140,17 @@ export default {
             backgroundPosition: "0% 50%",
           },
         },
+        "shine": {
+          "0%": {
+            backgroundPosition: "0% 0%",
+          },
+          "50%": {
+            backgroundPosition: "100% 100%",
+          },
+          "100%": {
+            backgroundPosition: "0% 0%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -155,6 +166,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite alternate",
         "aurora": "aurora 8s ease-in-out infinite",
+        "shine": "shine var(--duration) linear infinite",
         "shimmer-slide": "shimmer-slide var(--speed) ease-in-out infinite alternate",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear"
       },

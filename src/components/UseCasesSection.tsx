@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ShineBorder } from "@/components/ui/shine-border";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -74,7 +75,12 @@ const UseCasesSection = () => {
             Discover how our AI caller transforms customer conversations.
           </p>
           
-          <Card className="border border-border max-w-3xl mx-auto">
+          <Card className="border border-border max-w-3xl mx-auto relative">
+            <ShineBorder 
+              borderWidth={2} 
+              duration={8} 
+              shineColor={["#60a5fa", "#3b82f6", "#1d4ed8", "#93c5fd"]} 
+            />
             <CardContent className="p-10">
               <h3 className="text-2xl font-bold mb-8 text-foreground">
                 Receive a live call from our agent

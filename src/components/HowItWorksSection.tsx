@@ -47,14 +47,9 @@ const HowItWorksSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
-            <Card key={step.number} className="border border-border bg-card h-80 w-full">
+            <Card key={step.number} className="border border-border bg-card h-[450px] w-full">
               <CardContent className="p-6 text-center">
-                <div className="mb-6">
-                  <span className="text-6xl font-bold text-muted-foreground">
-                    {step.number}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-6 mt-4">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-sm mb-6">
