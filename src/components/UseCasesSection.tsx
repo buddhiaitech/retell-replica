@@ -77,9 +77,9 @@ const UseCasesSection = () => {
           
           <Card className="border border-border max-w-3xl mx-auto relative">
             <ShineBorder 
-              borderWidth={2} 
-              duration={8} 
-              shineColor={["#60a5fa", "#3b82f6", "#1d4ed8", "#93c5fd"]} 
+              borderWidth={1} 
+              duration={12} 
+              shineColor={["#e0f2fe", "#bae6fd", "#7dd3fc", "#38bdf8"]} 
             />
             <CardContent className="p-10">
               <h3 className="text-2xl font-bold mb-8 text-foreground">

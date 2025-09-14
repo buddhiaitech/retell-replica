@@ -66,42 +66,36 @@ const FAQSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-6 px-8 py-3 text-base font-medium bg-retell-cyan/20 text-retell-blue border-0 animate-fade-in">
-            FAQ
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Frequently Asked{" "}
-            <span className="text-blue-400">
-              Questions
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            Everything you need to know about Retell AI and how it can transform your business operations.
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <Card className="border border-border">
-            <CardContent className="p-8">
-              <Accordion type="single" collapsible className="w-full space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    value={`item-${index}`}
-                    className="border border-border rounded-lg px-6 py-2"
-                  >
-                    <AccordionTrigger className="text-left font-semibold text-lg text-foreground">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-base leading-relaxed pt-4">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </CardContent>
-          </Card>
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column - Title and Description */}
+          <div className="space-y-6">
+            <Badge variant="secondary" className="mb-4 px-6 py-2 text-sm font-medium bg-purple-100 text-purple-900 border-0">
+              FAQ
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+              Everything You Need to Know About Buddhi's AI Voice Agents
+            </h2>
+          </div>
+          
+          {/* Right Column - FAQ Accordion */}
+          <div>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="border border-border rounded-lg"
+                >
+                  <AccordionTrigger className="text-left font-semibold text-lg text-foreground px-6 py-4 hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-base leading-relaxed px-6 pb-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
