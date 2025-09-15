@@ -53,7 +53,7 @@ const FeaturesSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* First Card */}
             <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
               <CardContent className="p-8 h-full flex flex-col">
@@ -75,8 +75,8 @@ const FeaturesSection = () => {
               </CardContent>
             </Card>
 
-            {/* Second Card */}
-            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
+            {/* Second Card - Wider */}
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px] lg:col-span-2">
               <CardContent className="p-8 h-full flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-3">
@@ -105,8 +105,8 @@ const FeaturesSection = () => {
               </CardContent>
             </Card>
 
-            {/* Third Card */}
-            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
+            {/* Third Card - Wider */}
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px] lg:col-span-2">
               <CardContent className="p-8 h-full flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-3">
