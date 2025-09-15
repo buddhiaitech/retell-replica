@@ -1,4 +1,5 @@
 import teamPhoto from "@/assets/team-photo.jpg";
+import { AuroraText } from "@/components/ui/aurora-text";
 
 const TeamSection = () => {
   return (
@@ -15,12 +16,22 @@ const TeamSection = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden relative">
             <img 
               src={teamPhoto} 
               alt="Our dedicated team of AI voice technology experts" 
               className="w-full h-80 object-cover"
+              style={{ filter: 'blur(10px)' }}
             />
+            
+            <div className="absolute inset-0 flex items-center justify-center">
+              <AuroraText 
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide"
+                colors={["#FFFFFF", "#E0F7FA", "#B3E5FC", "#81D4FA"]}
+              >
+                We Reveal Soon
+              </AuroraText>
+            </div>
           </div>
           
           <div className="text-center mt-12">
