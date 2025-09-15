@@ -3,7 +3,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ShineBorder } from "@/components/ui/shine-border";
-import { Ripple } from "@/components/ui/ripple";
 import { useState, useEffect, useRef } from "react";
 import customerSupportImage from "@/assets/customer-support.jpg";
 import healthcareVoiceImage from "@/assets/healthcare-voice.jpg";
@@ -64,13 +63,8 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="relative pt-0 pb-0 bg-white overflow-hidden">
-      {/* Ripple Background Animation */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Ripple circleClassName="border-[hsl(var(--primary))] rounded-full" />
-      </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section ref={sectionRef} className="pt-0 pb-0 bg-white">
+      <div className="container mx-auto px-6">
         {/* Enhanced Live Demo Section */}
         <div className="max-w-5xl mx-auto text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
