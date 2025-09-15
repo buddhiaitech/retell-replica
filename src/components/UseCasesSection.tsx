@@ -67,7 +67,7 @@ const UseCasesSection = () => {
       <div className="container mx-auto px-6">
         {/* Enhanced Live Demo Section */}
         <div className="max-w-5xl mx-auto text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-medium text-foreground mb-8 animate-fade-in">
             Try Our{" "}
             <span className="text-blue-500">
               Live Demo
@@ -120,7 +120,7 @@ const UseCasesSection = () => {
 
         {/* Enhanced Use Cases Tabs */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12 animate-fade-in">Use Cases</h2>
+          <h2 className="text-4xl font-medium text-center text-foreground mb-12 animate-fade-in">Use Cases</h2>
           <Tabs value={activeUseCase} onValueChange={setActiveUseCase} className="w-full">
             <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-5xl mx-auto">
               {useCases.map((useCase) => (

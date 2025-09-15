@@ -70,7 +70,7 @@ const FAQSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Title and Description */}
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+            <h2 className="text-4xl md:text-5xl font-medium text-foreground leading-tight">
               Everything You Need to Know About Buddhi's AI Voice Agents
             </h2>
             

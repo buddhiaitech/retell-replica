@@ -39,7 +39,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-6">
         {/* Powerful AI Agent Creation Features */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
+          <h2 className="text-4xl font-medium text-center text-foreground mb-12">
             Powerful AI Agent Creation Features
           </h2>
           <AgentFeaturesSection />
@@ -48,7 +48,7 @@ const FeaturesSection = () => {
         {/* Deploy Features */}
         <div className="bg-blue-50 rounded-3xl p-12">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-medium text-black mb-6">
               Effortlessly Deploy AI Calls
             </h2>
           </div>
