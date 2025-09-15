@@ -56,7 +56,7 @@ const HeroSection = () => {
             <ShimmerButton 
               shimmerColor="#60a5fa" 
               background="rgba(255, 255, 255, 1)"
-              className="px-8 py-6 text-lg font-medium text-foreground"
+              className="px-6 py-4 text-base font-medium text-foreground"
             >
               TRY FOR FREE
             </ShimmerButton>
