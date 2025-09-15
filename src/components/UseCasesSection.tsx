@@ -122,17 +122,42 @@ const UseCasesSection = () => {
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12 animate-fade-in">Use Cases</h2>
           <Tabs value={activeUseCase} onValueChange={setActiveUseCase} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12 bg-muted/50 p-2 rounded-2xl justify-center mx-auto max-w-4xl">
+            <div className="flex flex-wrap justify-center gap-4 mb-12 max-w-5xl mx-auto">
               {useCases.map((useCase) => (
-                <TabsTrigger 
-                  key={useCase.id} 
-                  value={useCase.id}
-                  className="text-xs lg:text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-500 ease-in-out transform hover:scale-105 rounded-xl text-center"
+                <button
+                  key={useCase.id}
+                  onClick={() => setActiveUseCase(useCase.id)}
+                  className={`
+                    relative overflow-hidden px-6 py-4 rounded-full font-medium text-sm lg:text-base
+                    transition-all duration-300 transform hover:scale-105 active:scale-97
+                    border-0 cursor-pointer z-0 min-w-[200px]
+                    ${activeUseCase === useCase.id 
+                      ? 'bg-gradient-to-r from-white to-blue-100 text-blue-800 shadow-lg' 
+                      : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-white hover:to-blue-50 hover:text-blue-700'
+                    }
+                    shadow-md hover:shadow-lg
+                    before:absolute before:inset-0 before:rounded-full before:p-[1px]
+                    before:bg-gradient-to-r before:from-blue-200 before:via-blue-100 before:to-white
+                    before:-z-10 before:opacity-50
+                    after:absolute after:bottom-0 after:top-0 after:left-0 after:right-0
+                    after:flex after:items-center after:justify-center after:-z-5
+                    after:opacity-30
+                    group
+                  `}
                 >
-                  {useCase.title}
-                </TabsTrigger>
+                  <span className="relative z-10">{useCase.title}</span>
+                  <div className="absolute bottom-0 top-0 left-0 right-0 flex items-center justify-center -z-5">
+                    <div className={`
+                      bg-gradient-to-r from-blue-300 via-blue-200 to-white
+                      rounded-full w-40 h-40 transition-all duration-400
+                      filter blur-xl opacity-0 group-hover:opacity-50
+                      group-hover:w-32 group-hover:h-32
+                      animate-spin
+                    `} />
+                  </div>
+                </button>
               ))}
-            </TabsList>
+            </div>
             
             {useCases.map((useCase, index) => (
               <TabsContent key={useCase.id} value={useCase.id} className="mt-8">
