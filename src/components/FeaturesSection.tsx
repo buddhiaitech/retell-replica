@@ -55,8 +55,8 @@ const FeaturesSection = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* First Card */}
-            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[400px]">
-              <CardContent className="p-8">
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
+              <CardContent className="p-8 h-full flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-3">
                     {deployFeatures[0].title}
@@ -65,19 +65,19 @@ const FeaturesSection = () => {
                     {deployFeatures[0].description}
                   </p>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg flex-1 overflow-hidden">
                   <img 
                     src={buddhiCall} 
                     alt="Branded Call ID demonstration"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </CardContent>
             </Card>
 
             {/* Second Card */}
-            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[400px]">
-              <CardContent className="p-8">
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
+              <CardContent className="p-8 h-full flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-3">
                     {deployFeatures[1].title}
@@ -93,7 +93,7 @@ const FeaturesSection = () => {
                     ))}
                   </div>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-24 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg flex-1 overflow-hidden">
                   <video 
                     src={sipTrunkingVideo} 
                     autoPlay 
@@ -106,8 +106,8 @@ const FeaturesSection = () => {
             </Card>
 
             {/* Third Card */}
-            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[400px]">
-              <CardContent className="p-8">
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
+              <CardContent className="p-8 h-full flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-3">
                     {deployFeatures[2].title}
@@ -116,7 +116,7 @@ const FeaturesSection = () => {
                     {deployFeatures[2].description}
                   </p>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg flex-1 overflow-hidden">
                   <video 
                     src={sipTrunkingVideo} 
                     autoPlay 
@@ -129,8 +129,8 @@ const FeaturesSection = () => {
             </Card>
 
             {/* Fourth Card */}
-            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[400px]">
-              <CardContent className="p-8">
+            <Card className="bg-white border-0 rounded-2xl overflow-hidden h-[500px]">
+              <CardContent className="p-8 h-full flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold text-blue-900 mb-3">
                     {deployFeatures[3].title}
@@ -139,7 +139,7 @@ const FeaturesSection = () => {
                     {deployFeatures[3].description}
                   </p>
                 </div>
-                <div className="bg-blue-50 rounded-lg h-32 overflow-hidden">
+                <div className="bg-blue-50 rounded-lg flex-1 overflow-hidden">
                   <img 
                     src={verifiedNumbers} 
                     alt="Verified Phone Numbers demonstration"
