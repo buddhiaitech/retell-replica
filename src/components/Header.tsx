@@ -17,19 +17,12 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-transparent">
+    <header className="w-full sticky top-0 z-50 bg-transparent pt-10">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-gray-800 transition-opacity duration-300" style={{ opacity }}>
-            Buddhi Voice <span className="text-blue-600">AI</span>
+        <div className="flex items-center justify-center">
+          <div className="text-4xl font-sans font-extrabold text-gray-800 transition-opacity duration-00" style={{ opacity }}>
+            Buddhi Voice
           </div>
-          <Button
-            className="px-6 font-medium border border-blue-300 text-blue-600 bg-transparent hover:bg-transparent hover:text-blue-600 hover:shadow-none transition-opacity duration-300"
-            style={{ opacity }}
-            onClick={() => navigate('/login')}
-          >
-            LOGIN
-          </Button>
         </div>
       </div>
     </header>

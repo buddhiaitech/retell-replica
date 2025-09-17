@@ -8,69 +8,101 @@ import customerSupportImage from "@/assets/customer-support.jpg";
 import healthcareVoiceImage from "@/assets/healthcare-voice.jpg";
 import salesLeadImage from "@/assets/sales-lead.jpg";
 
-
 const UseCasesSection = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [activeUseCase, setActiveUseCase] = useState("sales-lead");
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
-      
+
       const rect = sectionRef.current.getBoundingClientRect();
       const scrolled = window.pageYOffset;
       const parallax = scrolled * 0.2;
-      
-      sectionRef.current.style.setProperty('--scroll-offset', `${parallax * 0.1}px`);
+
+      sectionRef.current.style.setProperty(
+        "--scroll-offset",
+        `${parallax * 0.1}px`
+      );
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const useCases = [
     {
       id: "sales-lead",
       title: "Sales & Lead Qualification",
-      description: "Automated lead qualification and scoring with follow-up calls for warm prospects, product demonstrations and appointment scheduling.",
+      description:
+        "Automated lead qualification and scoring with follow-up calls for warm prospects, product demonstrations and appointment scheduling.",
       image: salesLeadImage,
-      features: ["Lead Qualification", "Follow-up Calls", "Product Demos", "Appointment Confirmation"]
+      features: [
+        "Lead Qualification",
+        "Follow-up Calls",
+        "Product Demos",
+        "Appointment Confirmation",
+      ],
     },
     {
       id: "customer-support",
       title: "Customer Support",
-      description: "24/7 first-level technical support with order status inquiries, billing management, and complaint resolution.",
+      description:
+        "24/7 first-level technical support with order status inquiries, billing management, and complaint resolution.",
       image: customerSupportImage,
-      features: ["24/7 Support", "Order Inquiries", "Billing Management", "Complaint Resolution"]
+      features: [
+        "24/7 Support",
+        "Order Inquiries",
+        "Billing Management",
+        "Complaint Resolution",
+      ],
     },
     {
       id: "marketing-surveys",
       title: "Marketing & Surveys",
-      description: "Market research and customer feedback collection, event invitations, satisfaction surveys, and brand awareness campaigns.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      features: ["Market Research", "Event Management", "Customer Surveys", "Brand Campaigns"]
+      description:
+        "Market research and customer feedback collection, event invitations, satisfaction surveys, and brand awareness campaigns.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      features: [
+        "Market Research",
+        "Event Management",
+        "Customer Surveys",
+        "Brand Campaigns",
+      ],
     },
     {
       id: "healthcare",
       title: "Healthcare & Appointments",
-      description: "Patient appointment scheduling and reminders, medication adherence follow-ups, post-treatment check-ins, and insurance verification.",
+      description:
+        "Patient appointment scheduling and reminders, medication adherence follow-ups, post-treatment check-ins, and insurance verification.",
       image: healthcareVoiceImage,
-      features: ["Appointment Scheduling", "Medication Follow-ups", "Check-ins", "Insurance Verification"]
-    }
+      features: [
+        "Appointment Scheduling",
+        "Medication Follow-ups",
+        "Check-ins",
+        "Insurance Verification",
+      ],
+    },
   ];
 
   return (
-    <section ref={sectionRef} className="pt-0 pb-0 bg-white">
+    <section ref={sectionRef} className="mt-[550px] pb-0 bg-white">
       <div className="container mx-auto px-6">
-       
-
         {/* Enhanced Use Cases Tabs */}
         <div className="mb-20">
-          <h2 className="text-4xl font-medium text-center text-foreground mb-12 animate-fade-in">Use Cases</h2>
-          <Tabs value={activeUseCase} onValueChange={setActiveUseCase} className="w-full">
+          <h2 className="text-4xl font-medium text-center text-foreground mb-12 animate-fade-in">
+            Use Cases
+          </h2>
+          <Tabs
+            value={activeUseCase}
+            onValueChange={setActiveUseCase}
+            className="w-full"
+          >
+            {/* Tabs Navigation */}
             <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-5xl mx-auto">
               {useCases.map((useCase) => (
                 <button
@@ -79,9 +111,10 @@ const UseCasesSection = () => {
                   className={`
                     px-5 py-3 rounded-full font-medium text-sm
                     transition-all duration-300 cursor-pointer
-                    ${activeUseCase === useCase.id 
-                      ? 'bg-gradient-to-r from-white to-blue-100 text-blue-800 shadow-lg' 
-                      : 'bg-white text-gray-700'
+                    ${
+                      activeUseCase === useCase.id
+                        ? "bg-gradient-to-r from-white to-blue-100 text-blue-800 shadow-lg"
+                        : "bg-white text-gray-700"
                     }
                     shadow-md border border-blue-100
                   `}
@@ -90,8 +123,9 @@ const UseCasesSection = () => {
                 </button>
               ))}
             </div>
-            
-            {useCases.map((useCase, index) => (
+
+            {/* Tabs Content */}
+            {useCases.map((useCase) => (
               <TabsContent key={useCase.id} value={useCase.id} className="mt-8">
                 <Card className="border border-border transition-all duration-500 ease-in-out animate-fade-in">
                   <CardContent className="p-10">
@@ -103,27 +137,34 @@ const UseCasesSection = () => {
                         <p className="text-lg text-muted-foreground leading-relaxed">
                           {useCase.description}
                         </p>
-                        
+
                         {/* Feature List */}
                         <div className="grid grid-cols-2 gap-3">
                           {useCase.features.map((feature, i) => (
-                            <div key={i} className="flex items-center space-x-2 transform transition-all duration-300 ease-in-out hover:translate-x-1">
+                            <div
+                              key={i}
+                              className="flex items-center space-x-2 transform transition-all duration-300 ease-in-out hover:translate-x-1"
+                            >
                               <div className="w-2 h-2 bg-primary rounded-full"></div>
-                              <span className="text-sm text-muted-foreground">{feature}</span>
+                              <span className="text-sm text-muted-foreground">
+                                {feature}
+                              </span>
                             </div>
                           ))}
                         </div>
-                        
-                        <Button 
-                          variant="outline" 
+
+                        <Button
+                          variant="outline"
                           className="border-2 border-primary text-primary px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105"
                         >
                           Learn More
                         </Button>
                       </div>
+
+                      {/* Image */}
                       <div className="relative transform transition-all duration-500 ease-in-out">
-                        <img 
-                          src={useCase.image} 
+                        <img
+                          src={useCase.image}
                           alt={useCase.title}
                           className="w-full h-80 object-cover rounded-2xl"
                         />
@@ -135,7 +176,6 @@ const UseCasesSection = () => {
             ))}
           </Tabs>
         </div>
-
       </div>
     </section>
   );

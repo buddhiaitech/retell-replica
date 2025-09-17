@@ -8,9 +8,17 @@ const Footer = () => {
       }}
     >
       <div className="w-full px-6 text-center">
-        <h2 className="text-[1.6rem] md:text-[2.3rem] lg:text-[5.3rem] xl:text-[8.7rem] font-black tracking-tight text-black leading-none transform scale-x-125 scale-y-125 w-full" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-          BUDDHI<span className="text-blue-600">VOICE</span>AI
-        </h2>
+        <h2
+  className="text-[1.6rem] md:text-[2.3rem] lg:text-[5.3rem] xl:text-[8.7rem] font-black tracking-tight leading-none transform scale-x-125 scale-y-125 w-full opacity-20"
+  style={{
+    fontFamily: 'Montserrat, sans-serif',
+    WebkitTextStroke: '1px black', // Outline thickness & color
+    color: 'white',                // Fill color
+  }}
+>
+  BUDDHIVOICEAI<span style={{ WebkitTextStroke: '2px black', color: '#2563eb' }}></span>
+</h2>
+
       </div>
     </footer>
   );
