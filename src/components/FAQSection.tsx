@@ -1,13 +1,20 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Orb from "@/components/ui/orb";
 
 const FAQSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+  const [isRevealing, setIsRevealing] = useState(false);
+  const [moveAmount, setMoveAmount] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollVelocity, setScrollVelocity] = useState(0);
 
   useEffect(() => {
+    let animationFrame: number;
+    
     const handleScroll = () => {
       if (!sectionRef.current) return;
       
@@ -16,11 +23,50 @@ const FAQSection = () => {
       const parallax = scrolled * 0.5;
       
       sectionRef.current.style.setProperty('--scroll-offset', `${parallax * 0.1}px`);
+      
+      // Calculate scroll velocity
+      const currentVelocity = scrolled - lastScrollY;
+      setScrollVelocity(currentVelocity);
+      setLastScrollY(scrolled);
+      setScrollY(scrolled);
+      
+      // Check if user has reached the bottom of FAQ section
+      const sectionTop = rect.top;
+      const sectionHeight = rect.height;
+      const windowHeight = window.innerHeight;
+      const distanceFromBottom = (sectionTop + sectionHeight) - windowHeight;
+      
+      // Start moving only when user has completely reached the bottom of FAQ section
+      if (distanceFromBottom <= 0 && distanceFromBottom >= -300) {
+        // Calculate movement based on scroll velocity and distance
+        const baseMovement = Math.abs(distanceFromBottom) * 1.5;
+        const velocityMultiplier = Math.min(Math.abs(currentVelocity) * 0.5, 3); // Cap velocity multiplier
+        const calculatedMoveAmount = Math.max(0, Math.min(200, baseMovement * velocityMultiplier));
+        
+        setMoveAmount(calculatedMoveAmount);
+        setIsRevealing(calculatedMoveAmount > 0);
+      } else {
+        // Immediately reset when scrolling back up or out of range
+        setMoveAmount(0);
+        setIsRevealing(false);
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const throttledScroll = () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+      animationFrame = requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', throttledScroll);
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [lastScrollY]);
 
   const faqs = [
     {
@@ -57,8 +103,14 @@ const FAQSection = () => {
     }
   ];
 
-  return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
+   return (
+     <section 
+       ref={sectionRef} 
+       className="py-24 pb-32 bg-white relative overflow-hidden rounded-b-[3rem] border-b-4 border-x-2 border-l-gray-200 border-r-gray-200 border-b-gray-200"
+       style={{
+         zIndex: 10
+       }}
+     >
       {/* Parallax Background Elements */}
       <div className="absolute inset-0 parallax-slow">
         <div className="absolute top-10 left-10 w-32 h-32 bg-retell-cyan/10 rounded-full blur-2xl animate-float"></div>

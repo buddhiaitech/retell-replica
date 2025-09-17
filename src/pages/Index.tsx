@@ -7,6 +7,7 @@ import TeamSection from "@/components/TeamSection";
 import FAQSection from "@/components/FAQSection";
 import EnterpriseGrid from "@/components/EnterpriseGrid";
 import LogoCarousel from "@/components/LogoCarousel";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -34,6 +35,7 @@ const Index = () => {
         </div>
       </section>
       <FAQSection />
+      <Footer />
     </div>
   );
 };

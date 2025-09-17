@@ -65,58 +65,7 @@ const UseCasesSection = () => {
   return (
     <section ref={sectionRef} className="pt-0 pb-0 bg-white">
       <div className="container mx-auto px-6">
-        {/* Enhanced Live Demo Section */}
-        <div className="max-w-5xl mx-auto text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-medium text-foreground mb-8 animate-fade-in">
-            Try Our{" "}
-            <span className="text-blue-500">
-              Live Demo
-            </span>
-          </h2>
-          <p className="text-xl text-muted-foreground mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Discover how our AI caller transforms customer conversations.
-          </p>
-          
-          <Card className="border border-border max-w-3xl mx-auto relative">
-            <ShineBorder 
-              borderWidth={1} 
-              duration={12} 
-              shineColor={["#e0f2fe", "#bae6fd", "#7dd3fc", "#38bdf8"]} 
-            />
-            <CardContent className="p-10">
-              <h3 className="text-2xl font-bold mb-8 text-foreground">
-                Receive a live call from our agent
-              </h3>
-              <div className="space-y-6">
-                <Input
-                  placeholder="Phone Number"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  className="h-14 text-lg"
-                />
-                <Input
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="h-14 text-lg"
-                />
-                <Input
-                  placeholder="Email Address"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="h-14 text-lg"
-                />
-                <Button 
-                  className="w-full h-16 bg-primary text-white text-xl font-bold"
-                  size="lg"
-                >
-                  Request Demo Call
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+       
 
         {/* Enhanced Use Cases Tabs */}
         <div className="mb-20">
