@@ -1,25 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ShineBorder } from "@/components/ui/shine-border";
 import { useState, useEffect, useRef } from "react";
 import customerSupportImage from "@/assets/customer-support.jpg";
 import healthcareVoiceImage from "@/assets/healthcare-voice.jpg";
 import salesLeadImage from "@/assets/sales-lead.jpg";
 
 const UseCasesSection = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [activeUseCase, setActiveUseCase] = useState("sales-lead");
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
 
-      const rect = sectionRef.current.getBoundingClientRect();
       const scrolled = window.pageYOffset;
       const parallax = scrolled * 0.2;
 
@@ -90,7 +84,10 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="mt-[550px] pb-0 bg-white">
+    <section
+      ref={sectionRef}
+      className="mt-[140px] sm:mt-[100px] lg:mt-[300px] xl:mt-[550px] pb-0 bg-white"
+    >
       <div className="container mx-auto px-6">
         {/* Enhanced Use Cases Tabs */}
         <div className="mb-20">
@@ -103,7 +100,7 @@ const UseCasesSection = () => {
             className="w-full"
           >
             {/* Tabs Navigation */}
-            <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-5xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12 max-w-5xl mx-auto">
               {useCases.map((useCase) => (
                 <button
                   key={useCase.id}
@@ -130,6 +127,7 @@ const UseCasesSection = () => {
                 <Card className="border border-border transition-all duration-500 ease-in-out animate-fade-in">
                   <CardContent className="p-10">
                     <div className="grid lg:grid-cols-2 gap-10 items-center">
+                      {/* Text Side */}
                       <div className="space-y-6 transform transition-all duration-500 ease-in-out">
                         <h3 className="text-3xl font-bold text-foreground">
                           {useCase.title}
@@ -161,7 +159,7 @@ const UseCasesSection = () => {
                         </Button>
                       </div>
 
-                      {/* Image */}
+                      {/* Image Side */}
                       <div className="relative transform transition-all duration-500 ease-in-out">
                         <img
                           src={useCase.image}
