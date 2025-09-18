@@ -47,11 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        retell: {
-          blue: "hsl(var(--retell-blue))",
-          cyan: "hsl(var(--retell-cyan))",
-          dark: "hsl(var(--retell-dark))",
-          gray: "hsl(var(--retell-gray))",
+        Buddhi: {
+          blue: "hsl(var(--Buddhi-blue))",
+          cyan: "hsl(var(--Buddhi-cyan))",
+          dark: "hsl(var(--Buddhi-dark))",
+          gray: "hsl(var(--Buddhi-gray))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
